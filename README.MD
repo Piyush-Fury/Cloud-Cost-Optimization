@@ -1,4 +1,5 @@
 This project focuses on optimizing cost by identifying stale resources in AWS services.
+
 Utilizing a serverless architecture, we will create a Lambda function that identifies EBS snapshots no longer associated with active EC2 instances. The function will then delete these snapshots, saving on storage costs.
 Description: The Lambda function retrieves all EBS snapshots owned by the account (self) and also retrieves a list of active EC2 instances (running and stopped). For each snapshot, it checks if the associated volume (if present) is associated with any active instance. If a stale snapshot is found, it is deleted, effectively optimizing storage costs.
 In Amazon Web Services (AWS), Elastic Block Store (EBS) provides block-level storage volumes for use with Amazon EC2 instances.
